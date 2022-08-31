@@ -1,0 +1,6 @@
+BUILD_DISPLAY_NAME=#26
+BUILD_ID=26
+BUILD_NUMBER=26
+BUILD_TAG=jenkins-infar-DomainTool-build_prometheus-26
+BUILD_URL=https://jenkins.okservice.cc/job/infar/job/DomainTool/job/build_prometheus/26/
+GIT_BRANCH=origin/master
