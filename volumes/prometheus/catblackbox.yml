@@ -1,0 +1,21 @@
+groups:
+- name: HttpStatusCode
+  rules:
+  - alert: http_200
+    annotations:
+      domain: 'Domain : {{ $labels.instance }}'
+      errhttpcode: '{{ $value }}'
+      httpcode: 200
+    expr: probe_http_status_code{job="http_200"} != 200
+    for: 0m
+    labels:
+      severity: critical
+  - alert: http_403
+    annotations:
+      domain: 'Domain : {{ $labels.instance }}'
+      errhttpcode: '{{ $value }}'
+      httpcode: 403
+    expr: probe_http_status_code{job="http_403"} != 403
+    for: 0m
+    labels:
+      severity: critical

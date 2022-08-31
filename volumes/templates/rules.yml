@@ -1,0 +1,9 @@
+- alert: BlackboxProbeHttpFailure
+  expr: probe_http_status_code{job="{{httpcode}}"} != 200
+  for: 0m
+  labels:
+    severity: critical
+  annotations:
+    domain: "Domain : {{ $labels.instance }}"
+    errhttpcode: "{{ $value }}"
+    

@@ -1,0 +1,10 @@
+global:
+route:
+  group_interval: 1m #當第一個報警發送後，等待'group_interval'時間來發送新的一組報警信息
+  repeat_interval: 1m # 如果一個報警信息已經發送成功了，等待'repeat_interval'時間來重新發送他們
+  receiver: "telegram"
+receivers:
+  - name: "telegram"
+    webhook_configs:
+      - url: "http://10.5.50.200:5000/alerts"
+      
